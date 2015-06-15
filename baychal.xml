@@ -86,7 +86,7 @@
                                     <field name="OP">LT</field>
                                     <value name="A">
                                       <block type="sensor_object" id="474">
-                                        <field name="OBJECT">RIGHTSIDE</field>
+                                        <field name="OBJECT">RIGHTFRONT</field>
                                       </block>
                                     </value>
                                     <value name="B">
@@ -102,7 +102,7 @@
                                       <block type="robot_delay" id="581" inline="true">
                                         <value name="DELAY">
                                           <block type="math_number" id="582">
-                                            <field name="NUM">400</field>
+                                            <field name="NUM">100</field>
                                           </block>
                                         </value>
                                         <next>
@@ -174,7 +174,7 @@
                                       <block type="robot_delay" id="575" inline="true">
                                         <value name="DELAY">
                                           <block type="math_number" id="576">
-                                            <field name="NUM">400</field>
+                                            <field name="NUM">200</field>
                                           </block>
                                         </value>
                                       </block>
