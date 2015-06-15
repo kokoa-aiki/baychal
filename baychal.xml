@@ -80,7 +80,7 @@
                             </value>
                             <next>
                               <block type="controls_if" id="445" inline="false">
-                                <mutation elseif="1" else="1"></mutation>
+                                <mutation elseif="2" else="1"></mutation>
                                 <value name="IF0">
                                   <block type="logic_compare" id="482" inline="true">
                                     <field name="OP">LT</field>
@@ -102,6 +102,47 @@
                                       <block type="robot_delay" id="581" inline="true">
                                         <value name="DELAY">
                                           <block type="math_number" id="582">
+                                            <field name="NUM">400</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="movement_forward" id="605">
+                                            <next>
+                                              <block type="robot_delay" id="624" inline="true">
+                                                <value name="DELAY">
+                                                  <block type="math_number" id="625">
+                                                    <field name="NUM">200</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                                <value name="IF1">
+                                  <block type="logic_compare" id="607" inline="true">
+                                    <field name="OP">GT</field>
+                                    <value name="A">
+                                      <block type="sensor_object" id="608">
+                                        <field name="OBJECT">RIGHTSIDE</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="math_number" id="609">
+                                        <field name="NUM">50</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO1">
+                                  <block type="movement_left" id="619">
+                                    <next>
+                                      <block type="robot_delay" id="620" inline="true">
+                                        <value name="DELAY">
+                                          <block type="math_number" id="621">
                                             <field name="NUM">100</field>
                                           </block>
                                         </value>
@@ -109,7 +150,7 @@
                                     </next>
                                   </block>
                                 </statement>
-                                <value name="IF1">
+                                <value name="IF2">
                                   <block type="logic_compare" id="507" inline="true">
                                     <field name="OP">GT</field>
                                     <value name="A">
@@ -119,12 +160,12 @@
                                     </value>
                                     <value name="B">
                                       <block type="math_number" id="509">
-                                        <field name="NUM">100</field>
+                                        <field name="NUM">50</field>
                                       </block>
                                     </value>
                                   </block>
                                 </value>
-                                <statement name="DO1">
+                                <statement name="DO2">
                                   <block type="movement_right" id="534"></block>
                                 </statement>
                                 <statement name="ELSE">
